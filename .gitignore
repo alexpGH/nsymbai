@@ -1,0 +1,43 @@
+# CUSTOM
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.prof
+*~
+*#
+*.bak
+*.sav
+*.pkl
+*.pyc
+*.pem
+
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+#any .idea directory from pycharm
+.idea/
+/
+
+#.vscode default ignore all, add only individual files
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+
+#build dir
+/build
+/.cache
+/.vscode/tasks.json
+/build-native/
+/build-android/
+/build-android-api34
+/build-android-api34-release
+/build-android-x86_64-api34
+/lib/jwt/setup/*_ec256-pubkeyhex.json
