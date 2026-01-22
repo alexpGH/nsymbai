@@ -1,0 +1,1123 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrartcl
+\begin_preamble
+\pdfoutput=1
+\usepackage{latexsym}
+%\usepackage{lineno}[displaymath]
+\usepackage{graphicx}
+
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[placement={!ht},name=List]{mylist}
+
+% Page length commands go here in the preamble
+\setlength{\oddsidemargin}{0.0in} % Left margin of 1 in + 0 in = 1 in
+\setlength{\textwidth}{6.5in}   % Right margin of 8.5 in - 1 in - 6.5 in = 1 in
+\setlength{\topmargin}{-.75in}  % Top margin of 2 in -0.75 in = 1 in
+\setlength{\textheight}{9.2in}  % Lower margin of 11 in - 9 in - 1 in = 1 in
+
+\newtheorem{theorem}{Theorem}\newtheorem{definition}{Definition}
+
+\renewcommand{\baselinestretch}{1.0} % 1.5 denotes double spacing. Changing it will change the spacing
+
+% \usepackage{marginnote}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{Strictly confidential. \parbox{12cm}{\footnotesize{\textcopyright SCEX Team. All rights reserved, also regarding any disposal, exploitation, reproduction, editing, distribution, as well as in the event of applications for industrial property rights. }}}
+%\SetWatermarkColor[gray]{0.5}
+%\SetWatermarkFontSize{1cm}
+%\SetWatermarkAngle{90}
+%\SetWatermarkHorCenter{20cm}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{caption}
+%\captionsetup{labelfont=bf}% added, had to be here
+%\captionsetup[table]{justification=raggedleft}% added for changing table caption
+\captionsetup[table]{justification=raggedright,singlelinecheck=off}% added for changing table caption
+
+\usepackage{lineno}
+\linenumbers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%R&D report settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{scrlayer-scrpage}
+
+
+% decleare the header
+\DeclareNewLayer[
+  background,
+  height=23mm,
+  voffset=10pt,
+  contents={\sffamily\centerline{
+    \begin{minipage}[t]{\textwidth}
+      \raggedright
+      {\Large Corporate Research}\hfill
+      \includegraphics[width=40mm]{figures/logo_schwarz.pdf}
+
+      \vspace{2mm}
+
+      \begin{tabularx}{\textwidth}{X|X|l|l l}
+        \scriptsize From &
+        \scriptsize Our Reference &
+        \scriptsize Fone &
+        \scriptsize Mobile &
+        \scriptsize Renningen \\
+
+        CR/ASD3 &
+        Alexander Poddey &
+        \scriptsize +49 711 811-11738 &
+        \scriptsize +49 711 1735309810 &
+        \today \\
+
+        \scriptsize R\&D Report &
+        \scriptsize Security Class &
+        \scriptsize Exp. control relevant &
+        \scriptsize &
+        \scriptsize Report Number \\
+
+        \textbf{Interim Report} &
+        Internal &
+        \scriptsize No &
+        \scriptsize  &
+        tbd 
+
+
+      \end{tabularx}
+
+
+      
+%	\begin{tabularx}{\textwidth}{X|X|l|l|l}
+        %\multicolumn{4}{r}{} & Report Number \\
+%        \scriptsize{R\&D Report:} \textbf{Interim Report} &
+%        \scriptsize{Security Class:} Internal &
+%        t &
+%        Report Number \\
+%        \scriptsize Title: &
+%        \multicolumn{4}{l}{Titeltext}
+%      \end{tabularx}
+
+    \end{minipage}
+  }}%centerline contents
+]{rdheader}
+
+
+% use the bosch header
+% increase header height for logo etc.
+\setlength{\headheight}{23mm}
+\AddLayersToPageStyle{scrheadings}{rdheader}
+
+\pagestyle{scrheadings}
+
+% footer
+\clearpairofpagestyles
+\lefoot{}
+\cefoot{}
+\rofoot{Page \pagemark\ of \pageref{LastPage}}
+\refoot{Page \pagemark\ of \pageref{LastPage}}
+\setkomafont{pagefoot}{\normalfont\sffamily}
+\setkomafont{pagenumber}{\sffamily}
+
+% header on titlepage
+\DeclarePageStyleByLayers{titlepage}{scrheadings}
+\RemoveLayersFromPageStyle{titlepage}{scrfootings}
+\end_preamble
+\options BCOR0mm,headinclude,pagesize,11pt,openany,cleardoubleempty,bibtotoc,idxtotoc,liststotoc
+\use_default_options false
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package babel
+\inputencoding utf8
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine biblatex
+\cite_engine_type numerical
+\biblio_style plain
+\biblio_options sorting=none
+\biblatex_bibstyle numeric
+\biblatex_citestyle numeric
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Neurosymbolic AI - Notebook 
+\end_layout
+
+\begin_layout Author
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Alexander Poddey, 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{scrheadings}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+First
+\end_layout
+
+\begin_layout Standard
+This report builds on the previous report 
+\begin_inset Quotes eld
+\end_inset
+
+Foundations of zero knowledge cryptography
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "poddey_foundations_2024"
+literal "false"
+
+\end_inset
+
+ and extends the established foundations of zero knowledge (zk) to zk-SNARKs,
+ i.e.
+ zk succinct non-interactive arguments of knowledge.
+ From the viewpoint of broad applicability of zk in real world use cases,
+ succinctness, i.e.
+ efficient to generate, small size storage and transmission and efficient
+ verification of non-interactive protocols is required.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/zk01_x03.svg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Illustration of a binary hash tree.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bintree-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+More importantly, for applications in the context of regulation, like ID,
+ it is expected that the actual circuits and their digests 
+\begin_inset Formula $<C>$
+\end_inset
+
+, which would be widely applied, will be published, checked and agreed upon.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Basics
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Basics"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Modulo 
+\end_layout
+
+\begin_layout Subsubsection
+Modulo calculation
+\end_layout
+
+\begin_layout Standard
+Modulo is about the remainder.
+ E.g.
+ 
+\begin_inset Formula $1\mod3=1$
+\end_inset
+
+, because 
+\begin_inset Formula $1/3=0,rem=1$
+\end_inset
+
+ and 
+\begin_inset Formula $2\mod3=2$
+\end_inset
+
+, because 
+\begin_inset Formula $2/3=0,$
+\end_inset
+
+rem=2.
+ Therefore 
+\begin_inset Formula $5\mod3=2$
+\end_inset
+
+, because 
+\begin_inset Formula $5/3=1,rem=2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0\mod n=0$
+\end_inset
+
+.
+ Integers 
+\begin_inset Formula $\mod n$
+\end_inset
+
+ therefore means all integers up to 
+\begin_inset Formula $n-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Typically, the modulo is defined as positive remainder, even for negative
+ numbers.
+ In this approach, the negative value is shifted by the modvalue until the
+ result is positive and the remainder can be calculated.
+ E.g.
+ 
+\begin_inset Formula $-7\mod5=3$
+\end_inset
+
+, because 
+\begin_inset Formula $-7+2\cdot5=3$
+\end_inset
+
+ and hence the remainder is 3; 
+\begin_inset Formula $-1\mod3\rightarrow-1+3=2\rightarrow0,rem\,2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This aligns with the definition of the Euclidean division.
+ which always has positive remainder.
+ Another example: -17/5=4, remainder=3.
+ 
+\end_layout
+
+\begin_layout Standard
+Some approaches use negative remainders, then the application is as usual,
+ using division with sign, e.g.
+ 
+\begin_inset Formula $-7/5=-1,rem=-2$
+\end_inset
+
+.
+ The positive definition can also be thought of shifting negative remainders
+ by the mod value.
+\end_layout
+
+\begin_layout Standard
+Note that equations such as 
+\begin_inset Formula $a^{r}=1\,\mod p$
+\end_inset
+
+ are to be read as follows: the remainder of 
+\begin_inset Formula $a^{r}/p$
+\end_inset
+
+ should be 
+\begin_inset Formula $1$
+\end_inset
+
+, i.e.
+ the 
+\begin_inset Formula $\mod p$
+\end_inset
+
+ is applied to the left side!
+\end_layout
+
+\begin_layout Section
+Terms and symbols
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Terms-and-Symbols"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Prerequisites for the differentiation of ZK-schemes 
+\end_layout
+
+\begin_layout Standard
+The following 
+\end_layout
+
+\begin_layout Standard
+The behavior classes of the roles prover and validator in a in a ZK protocol
+ are given in Tab.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:t2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="block" valignment="top" width="70text%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Term
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Meaning
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Honest counterpart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Behaves as required by the protocol, e.g.
+ does not keep intermediate results.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dishonest counterpart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Does not adhere to agreements, e.g., keeps intermediate results.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Adversarial counterpart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actively cheating for his benefit.
+ See prover and validator examples.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Adversarial prover
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actively tries to convince the validator of the validity of the assertion
+ to posses the secret, without actually possessing it.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Adversarial validator
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actively tries to extract knowledge about the secret from the interaction
+ with the prover.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\series bold
+Behavior classes
+\series default
+ usually applied in cryptology.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:t2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="2">
+<features islongtable="true" firstHeadBottomDL="true" headBottomDL="true" longtabularalignment="left">
+<column alignment="left" valignment="top" width="25text%">
+<column alignment="block" valignment="top" width="70text%">
+<row endhead="true" endfirsthead="true">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Term
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Meaning
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zero Knowledge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The zero knowledge property states: anything that is feasibly computable
+ from a zero-knowledge proof is also feasibly computable from the valid
+ assertion itself.
+ This refers to all possible strategies the possibly adversary verifier
+ may employ to extract knowledge.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zero knowledge proof, argument and protocol
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+For the classification of zero knowledge proof, it is required that a probabilis
+tic polynomial-time bounded verifier is not tricked by an unbounded prover.
+ In contrast, an argument relates to a relaxed soundness property, where
+ the adversarial prover is limited to computational feasible implementations
+ based on polynomial sized circuits.
+ The relaxation has been introduced by Brassard et.al.
+ When the distinction between proof and argument is not explicitly required,
+ the term protocol is used by some authors.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Auxiliary input zero knowledge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The adversary may have any auxiliary input.
+ This is more strict formulation is important when using zero knowledge
+ protocols as subpart in larger protocols.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Perfect vs.
+ computational and statistical zero knowledge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Perfect ZK refers to an information theoretic guarantee for the zero knowledge
+ characteristic, while computational relates to certain computational capabiliti
+es.
+ See also Tab
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row endlastfoot="true" caption="true">
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none" width="100text%">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\noindent
+\align left
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\series bold
+Characteristics 
+\series default
+and related concepts in zk in logical order.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:t3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang american
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "bib/neuroSymbAi"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
